@@ -1,0 +1,28 @@
+<html>
+<head>
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'subdate/css/w3.css' %}">
+
+</head>
+<body>
+    <div class="w3-container w3-blue" style='max-width: 90%; margin-left:auto;margin-right:auto; text-align:center; padding-top:16px;'>
+        <h1>DateFrom</h1>
+
+        <form method='POST'>
+            {% csrf_token %}
+            <label>Inital Date</label>
+            <input id ="inital" name="initial" class='w3-input' type='date' value="{{ initial }}"><br>
+            <label>Final Date</label>
+            <input id="final" name="final" class='w3-input' type='date' value="{{ final }}"><br>
+            
+            <button class='w3-btn w3-red'>GET</button>
+        </form>
+        </div>
+        <br><br>
+        <div class='w3-container w3-blue' style='max-width: 90%; margin-left:auto;margin-right:auto; text-align:center; padding-top:16px; padding-bottom: 50px;'>
+            <h1>Result</h1>
+            <input id='result' name='result' class='w3-input' readonly value="{{ result }}">
+        </div>
+
+</body>
+</html>
